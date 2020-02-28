@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Авторизация - Портал ЦСЗН Архангельской области</title>
+	<script src="extension/jquery.min.js"></script>
+	<script src="extension/vue.min.js"></script>
+	<script src="extension/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="extension/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="vh-100 d-flex flex-column">
+	<div class="container-fluid h-100">
+		<div class="row h-100">
+			<div class="col-lg-3 col-md-4 col-sm-6 col-10 m-auto">
+				<div class="card py-2">
+					<div class="col my-2">
+						<h2 class="text-center">Авторизация</h2>
+					</div>
+					<div class="col my-2">
+						<input type="text" class="form-control" placeholder="Логин">
+					</div>
+					<div class="col my-2">
+						<input type="password" class="form-control" placeholder="Пароль">
+					</div>
+					<div class="col my-2">
+						<button type="submit" class="btn btn-primary w-100">Войти</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="alert alert-danger position-absolute" role="alert">
+			Неверный логин или пароль
+		</div>
+	</div>
+</body>
+</html>

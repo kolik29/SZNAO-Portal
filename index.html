@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Госуслуги - Портал ЦСЗН Архангельской области</title>
+	<script src="extension/jquery.min.js"></script>
+	<script src="extension/vue.min.js"></script>
+	<script src="extension/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="extension/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/script.js"></script>
+</head>
+<body class="vh-100 d-flex flex-column">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+		<h3 class="bg-primary text-white position-absolute brand m-0 col-3 text-center">Портал ЦСЗН АО</h3>
+		<div class="input-group offset-3 col-6">
+			<input type="text" class="form-control" placeholder="Поиск" aria-label="Поиск" aria-describedby="button-addon2">
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#">Государственная социальная помощь в виде денежных выплат</a>
+				<a class="dropdown-item" href="#">Предоставление субсидий на оплату жилого помещения и коммунальных услуг</a>
+				<a class="dropdown-item" href="#">Перелеты воздушным транспортом</a>
+			</div>
+			<div class="input-group-append">
+				<button class="btn btn-primary" type="button" id="button-addon2">Найти</button>
+			</div>
+		</div>
+		<div class="dropdown col-3 text-right">
+			<div class="dropdown-toggle" type="button" id="userProfileMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Куликов Николай Алексеевич
+			</div>
+			<div class="dropdown-menu dropdown-menu-right" aria-labelledby="userProfileMenu">
+				<a class="dropdown-item" href="#">Выйти</a>
+			</div>
+		</div>
+	</nav>
+	<div class="container-fluid pt-3">
+		<div class="row offset-3 col-6">
+			<ul class="nav nav-tabs mb-1 col-12">
+				<li class="nav-item">
+					<a data-toggle="tab" class="nav-link active text-dark" href="#categories">По категориям</a>
+				</li>
+				<li class="nav-item">
+					<a data-toggle="tab" class="nav-link text-dark" href="#list">Список</a>
+				</li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane fade show active" id="categories">
+					<ul>
+						<li class="my-2 position-relative">
+							<span>Государственная социальная помощь</span>
+							<ul>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Государственная социальная помощь в виде денежных выплат</a></li>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Государственная социальная помощь в виде предоставления требования на проезд воздушным транспортом</a></li>
+							</ul>
+						</li>
+						<li class="my-2 position-relative">
+							<span>Пособия семьям с детьми</span>
+							<ul>
+								<li class="my-2 position-relative">
+									<span>Государственные пособия</span>
+									<ul>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Пособие по беременности и родам</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Единовременное пособие женщинам, вставшим на учет в медицинских организациях в ранние сроки беременности</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Единовременное пособие при рождении ребенка</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Ежемесячное пособие по уходу за ребенком</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Единовременное пособие беременной жене военнослужащего, проходящего военную службу по призыву</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Ежемесячное пособие на ребенка военнослужащего, проходящего военную службу по призыву</a></li>
+									</ul>
+								</li>
+								<li class="my-2 position-relative">
+									<span>Социальные пособия</span>
+									<ul>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Ежемесячное пособие на ребенка</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Дополнительное ежемесячное пособие на ребенка</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Дополнительное ежемесячное пособие на ребенка в возрасте до трех лет на обеспечение полноценным питанием</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Ежемесячное пособие на ребенка, не посещающего дошкольную образовательную организацию</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Получателям ежемесячных пособий на детей</a></li>
+									</ul>
+								</li>
+									<li class="my-2 position-relative"><a href="#" class="text-dark">Единовременная денежная выплата женщинам, родившим первого ребенка в возрасте от 20 до 25 лет</a></li>
+									<li class="my-2 position-relative"><a href="#" class="text-dark">Ежемесячная выплата в связи с рождением (усыновлением) первого ребенка</a></li>
+									<li class="my-2 position-relative"><a href="#" class="text-dark">Ежемесячное пособие по уходу за ребенком-инвалидом</a></li>
+							</ul>
+						</li>
+						<li class="my-2 position-relative">
+							<span>Меры социальной поддержки многодетным семьям</span>
+							<ul>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Регистрация многодетной семьи</a></li>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Ежемесячная денежная выплата при рождении третьего ребенка или последующих детей</a></li>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Оплата в размере 30 процентов стоимости коммунальных услуг, сбора и вывоза бытовых отходов</a></li>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Ежемесячная денежная выплата на приобретение твердого топлива семьям, проживающим в домах с печным отоплением</a></li>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Компенсация части платы за содержание старшего ребенка в государственной или муниципальной дошкольной образовательной организации</a></li>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Ежемесячная денежная выплата на проезд для обучающихся в образовательных организациях</a></li>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Ежемесячная денежная выплата на питание ребенка, обучающегося в образовательной организации</a></li>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Ежегодная денежная выплата на приобретение одежды для ребенка, обучающегося в образовательной организации</a></li>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Выплата регионального материнского (семейного) капитала</a></li>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Единовременная денежная выплата на приобретение инвентаря для детей, представляющих Архангельскую область на спортивных соревнованиях, олимпиадах, турнирах, конкурсах, фестивалях</a></li>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Субсидия на приобретение транспортного средства семье, воспитывающей шесть и более детей</a></li>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Субсидия на улучшение жилищных условий при рождении (усыновлении) седьмого ребенка или последующих детей</a></li>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Денежная выплата многодетным семьям взамен предоставления им земельного участка в собственность бесплатно</a></li>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Субсидия на улучшение жилищных условий при рождении одновременно трех и более детей</a></li>
+							</ul>
+						</li>
+						<li class="my-2 position-relative">
+							<span>Субсидии</span>
+							<ul>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Региональная социальная доплата к пенсии</a></li>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Предоставление субсидий на оплату жилого помещения и коммунальных услуг</a></li>
+							</ul>
+						</li>
+						<li class="my-2 position-relative">
+							<span>Меры социальной поддержки льготным категориям граждан</span>
+							<ul>
+								<li class="my-2 position-relative">
+									<span>Меры социальной поддержки ветеранам, гражданам, пострадавшим от политических репрессий, и иным категориям граждан</span>
+									<ul>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Оплата в размере 50 процентов платы за жилое помещение, стоимости коммунальных услуг, сбора и вывоза бытовых отходов ветеранам труда, военной службы, репрессированным</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Ежемесячная денежная выплата на приобретение твердого топлива ветеранам труда, военной службы, репрессированным</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Ежемесячная денежная выплата</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Оплата 50% стоимости лекарственных препаратов для медицинского применения, приобретаемых по рецептам врачей</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Оплата 50% стоимости изготовления и ремонта зубных протезов</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Компенсация стоимости проезда</a></li>
+									</ul>
+								</li>
+								<li class="my-2 position-relative">
+									<span>Меры социальной поддержки инвалидам, семьям, имеющим детей-инвалидов</span>
+									<ul>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Ежемесячная денежная выплата на приобретение твердого топлива несовершеннолетним детям, состоящим на иждивении и проживающим в семьях, где оба родителя являются инвалидами либо одинокий родитель является инвалидом</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Компенсация в размере 50 процентов оплаты стоимости топлива при проживании в домах, не имеющих центрального отопления</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Оплата в размере 50 процентов стоимости коммунальных услуг несовершеннолетним детям, состоящим на иждивении и проживающим в семьях, где оба родителя являются инвалидами либо одинокий родитель является инвалидом</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Компенсация расходов на оплату жилых помещений и коммунальных услуг в размере 50 процентов</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Ежемесячное пособие по уходу за ребенком-инвалидом</a></li>
+									</ul>
+								</li>
+								<li class="my-2 position-relative">
+									<span>Меры социальной поддержки инвалидам боевых действий, членам семей погибших (умерших) военнослужащих</span>
+									<ul>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Ежемесячная доплата к пенсии нетрудоспособным членам семей погибших (умерших) военнослужащих</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Ежегодная материальная помощь родителям погибших (умерших) военнослужащих</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Ежемесячная доплата к пенсии инвалидам боевых действий</a></li>
+									</ul>
+								</li>
+								<li class="my-2 position-relative">
+									<span>Меры социальной поддержки инвалидам вследствие военной травмы, членам семей военнослужащих, погибших (умерших) вследствие военной травмы</span>
+									<ul>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Ежемесячная денежная компенсация членам семьи военнослужащего, погибшего (умершего) вследствие военной травмы</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Ежемесячная денежная компенсация инвалиду вследствие военной травмы</a></li>
+									</ul>
+								</li>
+								<li class="my-2 position-relative">
+									<span>Меры социальной поддержки гражданам при возникновении у них поствакцинальных осложнений</span>
+									<ul>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Ежемесячная денежная компенсация инвалидам вследствие поствакцинального осложнения</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Государственное единовременное пособие гражданам при возникновении у них поствакцинальных осложнений</a></li>
+									</ul>
+								</li>
+								<li class="my-2 position-relative">
+									<span>Меры социальной поддержки ветеранам Великой Отечественной войны</span>
+									<ul>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Компенсация расходов на оплату жилых помещений и коммунальных услуг ветеранам Великой Отечественной войны</a></li>
+									</ul>
+								</li>
+								<li class="my-2 position-relative">
+									<span>Меры социальной поддержки лицам, подвергшимся воздействию радиации</span>
+									<ul>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Компенсация расходов на оплату жилых помещений и коммунальных услуг в размере 50 процентов</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Оплата дополнительного оплачиваемого отпуска и единовременная компенсация на оздоровление</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Ежегодная компенсация за вред здоровью, нанесенный в результате чернобыльской катастрофы</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Ежемесячная денежная компенсация на приобретение продовольственных товаро</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Ежемесячная денежная компенсация на питание ребенка</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Ежемесячная компенсация семьям за потерю кормильца</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Пособие на погребение членам семей инвалидов вследствие чернобыльской катастрофы или лицам</a></li>
+										<li class="my-2 position-relative"><a href="#" class="text-dark">Ежегодная компенсация детям, потерявшим кормильца</a></li>
+									</ul>
+								</li>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Компенсация расходов на оплату жилых помещений и коммунальных услуг ветеранам Великой Отечественной войны</a></li>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Субсидии на оплату жилого помещения и коммунальных услуг</a></li>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Ежегодная денежная выплата гражданам, награжденным нагрудным знаком "Почетный донор России", "Почетный донор СССР"</a></li>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Дополнительное ежемесячное материальное обеспечение граждан, награжденных государственными наградами</a></li>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Дополнительное ежемесячное материальное обеспечение за особые заслуги в развитии социальной сферы Архангельской области</a></li>
+							</ul>
+						</li>
+						<li class="my-2 position-relative">
+							<span>Поддержка людей с инвалидностью</span>
+							<ul>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Ежемесячная денежная выплата на приобретение твердого топлива несовершеннолетним детям, состоящим на иждивении и проживающим в семьях, где оба родителя являются инвалидами либо одинокий родитель является инвалидом</a></li>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Компенсация в размере 50 процентов оплаты стоимости топлива при проживании в домах, не имеющих центрального отопления</a></li>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Оплата в размере 50 процентов стоимости коммунальных услуг несовершеннолетним детям, состоящим на иждивении и проживающим в семьях, где оба родителя являются инвалидами либо одинокий родитель является инвалидом</a></li>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Компенсация расходов на оплату жилых помещений и коммунальных услуг в размере 50 процентов</a></li>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Ежемесячное пособие по уходу за ребенком-инвалидом</a></li>
+							</ul>
+						</li>
+						<li class="my-2 position-relative">
+							<span>Присвоение званий</span>
+							<ul>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Присвоение звания «Ветеран труда Архангельской области»</a></li>
+								<li class="my-2 position-relative"><a href="#" class="text-dark">Присвоение звания «Ветеран труда»</a></li>
+							</ul>
+						</li>
+						<li class="my-2 position-relative"><a href="#" class="text-dark">Региональная социальная доплата к пенсии</a></li>
+						<li class="my-2 position-relative"><a href="#" class="text-dark">Субсидии на оплату жилого помещения и коммунальных услуг</a></li>
+						<li class="my-2 position-relative"><a href="#" class="text-dark">Организация оздоровления детей</a></li>
+						<li class="my-2 position-relative"><a href="#" class="text-dark">Компенсация расходов на приобретение спутникового оборудования</a></li>
+						<li class="my-2 position-relative"><a href="#" class="text-dark">Компенсация страховой премии по договору ОСАГО владельцев транспортных средств</a></li>
+						<li class="my-2 position-relative"><a href="#" class="text-dark">Социальное пособие на погребение</a></li>
+						<li class="my-2 position-relative"><a href="#" class="text-dark">Санаторно-курортное лечение в Центре реабилитации «Родник»</a></li>
+						<li class="my-2 position-relative"><a href="#" class="text-dark">Перелеты воздушным транспортом</a></li>
+						<li class="my-2 position-relative"><a href="#" class="text-dark">Адресная социальная помощь на улучшение социально-бытового положения ветеранов и инвалидов ВО</a>
+						</li>
+					</ul>
+				</div>
+				<div class="tab-pane fade" id="list">
+					<ul>
+						<li>
+							<a href="#" class="text-dark">Государственная социальная помощь в виде денежных выплат</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Государственная социальная помощь в виде предоставления требования на проезд воздушным транспортом</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Единовременная денежная выплата женщинам, родившим первого ребенка в возрасте от 20 до 25 лет</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежемесячная выплата в связи с рождением (усыновлением) первого ребенка</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежемесячная денежная выплата при рождении третьего ребенка или последующих детей</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежемесячное пособие по уходу за ребенком-инвалидом</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Пособие по беременности и родам</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Единовременное пособие женщинам, вставшим на учет в медицинских организациях в ранние сроки беременности</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Единовременное пособие при рождении ребенка</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежемесячное пособие по уходу за ребенком</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Единовременное пособие беременной жене военнослужащего, проходящего военную службу по призыву</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежемесячное пособие на ребенка военнослужащего, проходящего военную службу по призыву</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежемесячное пособие на ребенка</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Дополнительное ежемесячное пособие на ребенка</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Дополнительное ежемесячное пособие на ребенка в возрасте до трех лет на обеспечение полноценным питанием</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежемесячное пособие на ребенка, не посещающего дошкольную образовательную организацию</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Получателям ежемесячных пособий на детей</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Регистрация многодетной семьи</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Оплата в размере 30 процентов стоимости коммунальных услуг, сбора и вывоза бытовых отходов</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежемесячная денежная выплата на приобретение твердого топлива семьям, проживающим в домах с печным отоплением</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Компенсация части платы за содержание старшего ребенка в государственной или муниципальной дошкольной образовательной организации</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежемесячная денежная выплата на проезд для обучающихся в образовательных организациях</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежемесячная денежная выплата на питание ребенка, обучающегося в образовательной организации</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежегодная денежная выплата на приобретение одежды для ребенка, обучающегося в образовательной организации</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Выплата регионального материнского (семейного) капитала</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Единовременная денежная выплата на приобретение инвентаря для детей, представляющих Архангельскую область на спортивных соревнованиях, олимпиадах, турнирах, конкурсах, фестивалях</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Субсидия на приобретение транспортного средства семье, воспитывающей шесть и более детей</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Субсидия на улучшение жилищных условий при рождении (усыновлении) седьмого ребенка или последующих детей</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Денежная выплата многодетным семьям взамен предоставления им земельного участка в собственность бесплатно</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Субсидия на улучшение жилищных условий при рождении одновременно трех и более детей</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Региональная социальная доплата к пенсии</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Предоставление субсидий на оплату жилого помещения и коммунальных услуг</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Компенсация расходов на оплату жилых помещений и коммунальных услуг ветеранам Великой Отечественной войны</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Субсидии на оплату жилого помещения и коммунальных услуг</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежегодная денежная выплата гражданам, награжденным нагрудным знаком "Почетный донор России", "Почетный донор СССР"</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Дополнительное ежемесячное материальное обеспечение граждан, награжденных государственными наградами</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Дополнительное ежемесячное материальное обеспечение за особые заслуги в развитии социальной сферы Архангельской области</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Оплата в размере 50 процентов платы за жилое помещение, стоимости коммунальных услуг, сбора и вывоза бытовых отходов ветеранам труда, военной службы, репрессированным</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежемесячная денежная выплата на приобретение твердого топлива ветеранам труда, военной службы, репрессированным</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежемесячная денежная выплата</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Оплата 50% стоимости лекарственных препаратов для медицинского применения, приобретаемых по рецептам врачей</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Оплата 50% стоимости изготовления и ремонта зубных протезов</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Компенсация стоимости проезда</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Адресная социальная помощь на улучшение социально-бытового положения ветеранов и инвалидов ВОВ</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежемесячная денежная выплата на приобретение твердого топлива несовершеннолетним детям, состоящим на иждивении и проживающим в семьях, где оба родителя являются инвалидами либо одинокий родитель является инвалидом</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Компенсация в размере 50 процентов оплаты стоимости топлива при проживании в домах, не имеющих центрального отопления</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Оплата в размере 50 процентов стоимости коммунальных услуг несовершеннолетним детям, состоящим на иждивении и проживающим в семьях, где оба родителя являются инвалидами либо одинокий родитель является инвалидом</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Компенсация расходов на оплату жилых помещений и коммунальных услуг в размере 50 процентов</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежемесячная доплата к пенсии нетрудоспособным членам семей погибших (умерших) военнослужащих</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежегодная материальная помощь родителям погибших (умерших) военнослужащих</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежемесячная доплата к пенсии инвалидам боевых действий</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежемесячная денежная компенсация членам семьи военнослужащего, погибшего (умершего) вследствие военной травмы</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежемесячная денежная компенсация инвалиду вследствие военной травмы</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежемесячная денежная компенсация инвалидам вследствие поствакцинального осложнения</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Государственное единовременное пособие гражданам при возникновении у них поствакцинальных осложнений</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Оплата дополнительного оплачиваемого отпуска и единовременная компенсация на оздоровление</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежегодная компенсация за вред здоровью, нанесенный в результате чернобыльской катастрофы</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежемесячная денежная компенсация на приобретение продовольственных товаров</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежемесячная денежная компенсация на питание ребенка</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежемесячная компенсация семьям за потерю кормильца</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Пособие на погребение инвалидов вследствие чернобыльской катастрофы</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Ежегодная компенсация детям, потерявшим кормильца</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Присвоение звания «Ветеран труда Архангельской области»</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Присвоение звания «Ветеран труда»</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Требования на приобретение проездного билета на проезд воздушным транспортом</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Компенсация расходов по оплате проезда в размере 50 процентов стоимости проездных документов</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Организация оздоровления детей</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Компенсация расходов на приобретение спутникового оборудования</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Компенсация страховой премии по договору ОСАГО владельцев транспортных средств</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Социальное пособие на погребение</a>
+						</li>
+						<li>
+							<a href="#" class="text-dark">Санаторно-курортное лечение в Центре реабилитации «Родник»</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

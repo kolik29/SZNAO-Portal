@@ -1,0 +1,63 @@
+html {
+  margin-right: calc(-1 * (100vw - 100%));
+  overflow-x: hidden; }
+
+.alert {
+  right: 0;
+  bottom: 0;
+  margin-right: 1rem; }
+
+.navbar .brand {
+  left: 0;
+  top: 0;
+  line-height: 3rem;
+  height: 100%; }
+
+.input-group input,
+.input-group .input-group-append {
+  z-index: 2000 !important; }
+.input-group .dropdown-menu {
+  top: 100%;
+  left: 15px;
+  width: calc(100% - 30px);
+  margin-top: -20px;
+  padding-top: calc(20px + .5rem); }
+
+.nav .nav-item a {
+  text-decoration: none; }
+
+#categories ul, #list ul {
+  user-select: none; }
+  #categories ul li, #list ul li {
+    list-style: none;
+    cursor: pointer; }
+    #categories ul li a, #list ul li a {
+      transition: 0.3s;
+      display: inline-block; }
+      #categories ul li a:hover, #list ul li a:hover {
+        color: #007bff !important; }
+    #categories ul li span, #list ul li span {
+      display: inline-flex;
+      align-items: center;
+      color: #007bff !important; }
+      #categories ul li span:after, #categories ul li span:before, #list ul li span:after, #list ul li span:before {
+        content: "";
+        position: absolute;
+        left: -40px;
+        height: 5px;
+        width: 1.25em;
+        border-radius: 1px;
+        background: #afafaf;
+        transition: 0.3s; }
+      #categories ul li span:before, #list ul li span:before {
+        transform: rotate(90deg); }
+      #categories ul li span:hover:after, #categories ul li span:hover:before, #list ul li span:hover:after, #list ul li span:hover:before {
+        background: #007bff; }
+      #categories ul li span.minus:before, #list ul li span.minus:before {
+        transform: rotate(0); }
+
+#textEditor #pTitle {
+  font-size: 2.5rem;
+  outline: none; }
+
+/*# sourceMappingURL=style.css.map */
