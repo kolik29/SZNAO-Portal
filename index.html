@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Госуслуги - Портал ЦСЗН Архангельской области</title>
+	<script src="https://cdn.tiny.cloud/1/zu8ea070omrl31pcoowj5ks20zk2qojho8mfgohlj052uhz4/tinymce/5/tinymce.min.js" referrerpolicy="origin"/></script>
 	<script src="extension/jquery.min.js"></script>
 	<script src="extension/vue.min.js"></script>
 	<script src="extension/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
@@ -34,8 +35,8 @@
 			</div>
 		</div>
 	</nav>
-	<div class="container-fluid">
-		<div class="row">
+	<div class="container-fluid h-100">
+		<div class="row h-100">
 			<ul class="col-3 position-fixed" id="categories">
 				<li class="my-2 position-relative">
 					<span>Государственная социальная помощь</span>
@@ -199,7 +200,34 @@
 				<li class="my-2 position-relative"><a href="#" class="text-dark">Адресная социальная помощь на улучшение социально-бытового положения ветеранов и инвалидов ВО</a>
 				</li>
 			</ul>
-			<div class="offset-3 col-9" id="workflow">1</div>
+			<div class="offset-3 col-6 py-3" id="content">
+				<div class="form-group">
+					<select class="form-control" id="category">
+						<option>.Верхний уровень</option>
+						<option>Государственная социальная помощь</option>
+						<option>Пособия семьям с детьми</option>
+						<option>--Государственные пособия</option>
+						<option>--Социальные пособия</option>
+						<option>Меры социальной поддержки многодетным семьям</option>
+						<option>Субсидии</option>
+						<option>Меры социальной поддержки льготным категориям граждан</option>
+						<option>--Меры социальной поддержки ветеранам, гражданам, пострадавшим от политических репрессий, и иным категориям граждан</option>
+						<option>--Меры социальной поддержки инвалидам, семьям, имеющим детей-инвалидов</option>
+						<option>--Меры социальной поддержки инвалидам боевых действий, членам семей погибших (умерших) военнослужащих</option>
+						<option>--Меры социальной поддержки инвалидам вследствие военной травмы, членам семей военнослужащих, погибших (умерших) вследствие военной травмы</option>
+						<option>--Меры социальной поддержки гражданам при возникновении у них поствакцинальных осложнений</option>
+						<option>--Меры социальной поддержки ветеранам Великой Отечественной войны</option>
+						<option>--Меры социальной поддержки лицам, подвергшимся воздействию радиации</option>
+						<option>Поддержка людей с инвалидностью</option>
+						<option>Присвоение званий</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" id="title" placeholder="Название">
+				</div>
+				<textarea id="basic-example"></textarea>
+			</div>
+			<div class="col-3" id="controls">2</div>
 		</div>
 	</div>
 </body>
